@@ -12,7 +12,7 @@ import bodyParser from 'body-parser';
 import { Helmet } from 'react-helmet';
 
 app.use(bodyParser.json());
-app.use(express.static('build/public')); // To Block User
+app.use(express.static(__dirname + '/build'));
 
 const renderFullPage = (html, helmet) => {
   return `
@@ -25,7 +25,7 @@ const renderFullPage = (html, helmet) => {
     <body>
     <div id="app">${html}</div>
     </body>
-    <script src='client_bundle.js'></script>
+    <script src='public/client_bundle.js'></script>
     </html>
       `;
 };
