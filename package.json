@@ -10,7 +10,7 @@
         "webpack:client": "webpack --mode=development --config webpack.client.js --watch",
         "webpack:start": "nodemon --watch build --exec node build/bundle.js",
         "dev": "npm-run-all --parallel webpack:*",
-        "build": "webpack --config webpack.client.js --mode production && webpack --config webpack.server.js --mode production"
+        "build": "webpack --mode=production"
     },
     "dependencies": {
         "express": "4.16.4",
