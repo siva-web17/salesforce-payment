@@ -21,6 +21,7 @@ app.get('/', function(req, res) {
   <head>
       ${helmet.meta.toString()}
       ${helmet.title.toString()}
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
   <div id="app">${html}</div>

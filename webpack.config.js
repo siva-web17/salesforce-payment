@@ -30,7 +30,10 @@ const clientConfig = {
     'client.js': path.resolve(__dirname, './client.js')
   },
   module: {
-    rules: [js]
+    rules: [js,{
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader'],
+    }]
   },
   optimization: {
     splitChunks: {

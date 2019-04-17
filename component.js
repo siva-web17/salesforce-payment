@@ -19,10 +19,11 @@ class Home extends React.Component {
   render() {
     return (
       <div className="loader-center">
-        {this.Headers()}
-          <h1>Loader Image</h1>
-        <div className="slds-text-heading_large loader-text">Loading...</div>
-      </div>
+       <div className="loader"></div>
+      <div className="loader-text">Loading...</div>
+    </div>
+
+     
     );
   }
 }
