@@ -1,8 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
+import { request } from './request';
+import { payloadDecrytUrl } from './config';
 class Home extends React.Component {
-  onclick = () => console.log(this);
+  constructor(props) {
+    super(props);
+  }
   Headers = () => {
     return (
       <Helmet>
@@ -10,14 +13,18 @@ class Home extends React.Component {
       </Helmet>
     );
   };
+  componentDidMount() {
+     request({ url: payloadDecrytUrl, name: 'PAYLOAD_DECRYT', header: { bearer: 'xxxxxxx' }, payload: { name: 'some', job: 'some' } });
+  }
   render() {
     return (
-      <div>
+      <div className="loader-center">
         {this.Headers()}
-        <h1>Test</h1>
-        <button onClick={this.onclick}>Click</button>
+          <h1>Loader Image</h1>
+        <div className="slds-text-heading_large loader-text">Loading...</div>
       </div>
     );
   }
 }
 export default Home;
+
