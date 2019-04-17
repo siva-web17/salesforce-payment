@@ -6,9 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "npm run dev",
-        "webpack:server": "webpack --mode=development --config webpack.server.js --watch",
-        "webpack:client": "webpack --mode=development --config webpack.client.js --watch",
-        "webpack:start": "nodemon --watch build --exec node build/bundle.js",
+        "webpack:client": "webpack --mode=production --watch",
+        "webpack:start": "nodemon --watch dist --exec node dist/server.js",
         "dev": "npm-run-all --parallel webpack:*",
         "build": "webpack --mode=production"
     },
