@@ -6,7 +6,7 @@ import path from 'path';
 const app = express();
 app.use('/static', express.static(path.resolve(__dirname, 'public')));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 import Redirection from './client/Redirection';
 import { Helmet } from 'react-helmet';
 
