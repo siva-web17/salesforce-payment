@@ -1,4 +1,4 @@
-import { Logger } from './logger';
+import { Logger } from './Logger';
 import 'babel-polyfill';
 import { ApiHeaderInformation, salesforceLamdaUrl, poseidonLamdaUrl, salesforceHomeUrl } from './config';
 

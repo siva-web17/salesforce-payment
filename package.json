@@ -1,10 +1,13 @@
 {
-    "name": "react-ssr",
+    "name": "payment",
     "version": "1.0.0",
+    "author": {
+        "name": "Sivaraj(E1143)",
+        "url": "https://github.com/zural"
+    },
     "description": "",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "start": "npm run dev",
         "webpack:client": "webpack --mode=production --watch",
         "webpack:start": "nodemon --watch dist --exec node dist/server.js",
@@ -34,6 +37,5 @@
         "webpack-node-externals": "1.7.2"
     },
     "keywords": [],
-    "author": "",
     "license": "ISC"
 }
